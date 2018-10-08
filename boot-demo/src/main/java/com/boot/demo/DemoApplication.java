@@ -8,7 +8,6 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 
 @EnableHystrix
-@EnableCircuitBreaker
 @EnableFeignClients
 @EnableEurekaClient
 @SpringBootApplication
