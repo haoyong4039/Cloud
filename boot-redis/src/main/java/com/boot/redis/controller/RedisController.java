@@ -8,18 +8,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/redis/common")
-public class CommonController
+@RequestMapping("/redis")
+public class RedisController
 {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public String test(@RequestParam String message)
+    @RequestMapping(value = "/set", method = RequestMethod.GET)
+    public String set(@RequestParam String key, @RequestParam String value, @RequestParam int seconds)
     {
+        logger.info("key:{},value:{},seconds:{}", key, value, seconds);
 
-        logger.info("receive:{}", message);
-
-        return "存储成功";
+        return "redis set success";
     }
 }
