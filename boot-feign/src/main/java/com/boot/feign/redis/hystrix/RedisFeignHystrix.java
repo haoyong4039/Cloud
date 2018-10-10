@@ -1,6 +1,6 @@
-package com.boot.demo.feign.redis.hystrix;
+package com.boot.feign.redis.hystrix;
 
-import com.boot.demo.feign.redis.IRedisFeign;
+import com.boot.feign.redis.IRedisFeign;
 import org.springframework.stereotype.Component;
 
 @Component

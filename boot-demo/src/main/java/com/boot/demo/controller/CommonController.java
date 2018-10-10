@@ -1,6 +1,6 @@
 package com.boot.demo.controller;
 
-import com.boot.demo.feign.redis.IRedisFeign;
+import com.boot.feign.redis.IRedisFeign;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
