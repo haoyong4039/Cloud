@@ -37,7 +37,7 @@ public class CommonController
         logger.info("result:{}", result);
 
         Map<String,Object> map = new HashMap<>();
-        map.put("key","peope_two");
+        map.put("key","people_two");
         map.put("value","Mr.yong");
         map.put("seconds",120);
         result = iRedisFeign.set(map);

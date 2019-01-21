@@ -21,7 +21,7 @@ public class RedisController
     {
         logger.info("key:{},value:{},seconds:{}", key, value, seconds);
 
-        return "redis set success";
+        return "set one success";
     }
 
     @RequestMapping(value = "/set/two", method = RequestMethod.GET)
@@ -29,6 +29,6 @@ public class RedisController
     {
         logger.info("map:{}", map.toString());
 
-        return "redis set success";
+        return "set two success";
     }
 }
