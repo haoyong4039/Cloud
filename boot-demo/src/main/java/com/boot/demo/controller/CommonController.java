@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/common")
@@ -29,8 +31,16 @@ public class CommonController
     @RequestMapping(value = "/save", method = RequestMethod.GET)
     public void save()
     {
-        String result = iRedisFeign.set("name", "Mr.hao", 60);
+        String result = "";
 
+        result = iRedisFeign.set("people_one", "Mr.hao", 60);
+        logger.info("result:{}", result);
+
+        Map<String,Object> map = new HashMap<>();
+        map.put("key","peope_two");
+        map.put("value","Mr.yong");
+        map.put("seconds",120);
+        result = iRedisFeign.set(map);
         logger.info("result:{}", result);
     }
 
